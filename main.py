@@ -15,6 +15,11 @@ for r in range(row):
     board.append(row)
 
 
+treasure_row = 5
+treasure_col = 5
+
+board[treasure_row][treasure_col] = "T"
+
 for row in board:
     print(" ".join(row))
 
