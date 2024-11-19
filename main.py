@@ -7,7 +7,14 @@ col = 10
 board = []
 
 for r in range(row):
-    print(r)
+    row = []
 
     for c in range(col):
-        print(c)
+        row.append("*")
+    
+    board.append(row)
+
+
+for row in board:
+    print(" ".join(row))
+
