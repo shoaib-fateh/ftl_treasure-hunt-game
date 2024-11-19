@@ -38,7 +38,10 @@ while True:
         guess_row = int(input(f"{Fore.YELLOW}Choose a row to hide the treasure (0 to {rows - 1}): {Style.RESET_ALL}"))
         guess_col = int(input(f"{Fore.YELLOW}Choose a column to hide the treasure (0 to {cols - 1}): {Style.RESET_ALL}"))
 
-        if guess_row == treasure_row and guess_col == treasure_col:
+        if guess_row > rows or guess_col > cols: 
+            print(Fore.RED + "Outsite of the board, Try again!")
+
+        elif guess_row == treasure_row and guess_col == treasure_col:
             print(Fore.CYAN + "Great, You win!!" + Style.RESET_ALL)
             break
         else:
