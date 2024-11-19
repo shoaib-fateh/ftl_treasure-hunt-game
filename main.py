@@ -23,3 +23,17 @@ board[treasure_row][treasure_col] = "T"
 for row in board:
     print(" ".join(row))
 
+
+while True:
+    try:
+        treasure_row = int(input(f"Enter the row: (0 to {rows -1}) for treasure: "))
+        treasure_col = int(input(f"Enter the col: (0 to {cols -1}) for treasure: "))
+
+        if 0 <= treasure_row < rows and 0 <= treasure_col < cols:
+            print("Greate, You win!!")
+            break
+        else:
+            print("Wrong Hit, Try again!")
+
+    except ValueError:
+        print("Enter valid numbers.")
