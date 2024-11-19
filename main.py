@@ -1,22 +1,22 @@
+import random
 
 
-
-row = 10
-col = 10
+rows = int(input("Rows: "))
+cols = int(input("Cols: "))
 
 board = []
 
-for r in range(row):
+for r in range(rows):
     row = []
 
-    for c in range(col):
+    for c in range(cols):
         row.append("*")
     
     board.append(row)
 
 
-treasure_row = 5
-treasure_col = 5
+treasure_row = random.randint(0, rows - 1)
+treasure_col = random.randint(0, cols - 1)
 
 board[treasure_row][treasure_col] = "T"
 
